@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RailsStatic</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render partial: 'common/header' unless controller_name == "welcome" && action_name == "signin" && action_name == "contact" && action_name == "signup" %>
+<%= yield %>
+
+</body>
+</html>
